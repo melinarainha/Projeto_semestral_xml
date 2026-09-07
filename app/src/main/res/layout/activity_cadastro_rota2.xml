@@ -1,0 +1,53 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvTituloVeiculos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de Veículos"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/etPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Placa"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloVeiculos"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/etModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Modelo"
+        app:layout_constraintTop_toBottomOf="@id/etPlaca"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etAno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ano"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/etModelo"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnSalvarVeiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Salvar Veículo"
+        app:layout_constraintTop_toBottomOf="@id/etAno"
+        tools:layout_editor_absoluteX="32dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

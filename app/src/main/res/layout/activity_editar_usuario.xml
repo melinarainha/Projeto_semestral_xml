@@ -1,0 +1,60 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvTituloEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar Usuário"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/etNomeEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloEditar"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/etCpfEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CPF"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/etNomeEditar"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etSenhaEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/etCpfEditar"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/etPermissoesEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Permissões"
+        app:layout_constraintTop_toBottomOf="@id/etSenhaEditar"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnSalvarEdicao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar Alterações"
+        app:layout_constraintTop_toBottomOf="@id/etPermissoesEditar"
+        android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
