@@ -1,4 +1,4 @@
-package com.example.projeto_semestral
+package com.example.projeto_semestral_xml
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projeto_semestral.Usuario
+import com.example.projeto_semestral_xml.R
 import java.util.UUID
 
 class LoginUsuarioActivity : AppCompatActivity() {
@@ -22,7 +24,6 @@ class LoginUsuarioActivity : AppCompatActivity() {
         // Referências aos botões
         val btnCadastrar = findViewById<Button>(R.id.btnCadastrarUsuario)
         val btnLogin = findViewById<Button>(R.id.btnLoginUsuario)
-        val btnVerUsuarios = findViewById<Button>(R.id.btnVerUsuarios)
 
         // Cadastro de usuário
         btnCadastrar.setOnClickListener {
@@ -37,5 +38,6 @@ class LoginUsuarioActivity : AppCompatActivity() {
 
             UsuarioRepository.adicionarUsuario(usuario)
             Toast.makeText(this, "Usuário cadastrado!\n$usuario", Toast.LENGTH_LONG).show()
-
-// limpa os campos
+        }
+    }
+}
