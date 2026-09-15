@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Projeto_semestral_xml</string>
+    <!-- <string name="app_name">Projeto_semestral_xml</string> -->
     <string name="app_name">Controle de Frota</string>
     <string name="cadastro_veiculos">Cadastro de Veículos</string>
     <string name="cadastro_rota">Cadastro de Rota</string>

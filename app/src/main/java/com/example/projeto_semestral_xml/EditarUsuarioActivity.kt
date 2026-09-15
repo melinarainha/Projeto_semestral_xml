@@ -5,6 +5,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projeto_semestral.Usuario
+import kotlin.let
+import kotlin.collections.find
 
 class EditarUsuarioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +16,7 @@ class EditarUsuarioActivity : AppCompatActivity() {
 
         // Recupera o ID do usuário enviado pela ListaUsuariosActivity
         val usuarioId = intent.getStringExtra("usuarioId")
-        val usuario = UsuarioRepository.listarUsuarios().find { it.id == usuarioId }
+        //val usuario = UsuarioRepository.listarUsuarios().find { it.id == usuarioId }
 
         // Referências aos campos da tela
         val etNome = findViewById<EditText>(R.id.etNomeEditar)
@@ -23,7 +26,7 @@ class EditarUsuarioActivity : AppCompatActivity() {
         val btnSalvar = findViewById<Button>(R.id.btnSalvarEdicao)
 
         // Preenche os campos com os dados atuais do usuário
-        usuario?.let {
+        Usuario.let {
             etNome.setText(it.nome)
             etCpf.setText(it.cpf)
             etSenha.setText(it.senha)
@@ -32,9 +35,9 @@ class EditarUsuarioActivity : AppCompatActivity() {
 
         // Clique no botão salvar
         btnSalvar.setOnClickListener {
-            usuario?.let {
+            Usuario.let {
                 val usuarioAtualizado = Usuario(
-                    id = it.id,
+                    id = it.id.toString(),
                     nome = etNome.text.toString(),
                     cpf = etCpf.text.toString(),
                     senha = etSenha.text.toString(),
