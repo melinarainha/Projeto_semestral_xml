@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -5,17 +6,99 @@
     android:layout_height="match_parent"
     android:background="#F9FAFB"
     android:fitsSystemWindows="true"
-    android:paddingTop="24dp">
+    android:padding="24dp">
 
     <TextView
-        android:id="@+id/tvCadastroVeiculos"
+        android:id="@+id/tvCadastroCarro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cadastro_veiculos"
-        android:textSize="22sp"
+        android:text="Cadastro Carro"
         android:textColor="#1E88E5"
+        android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Modelo do carro"
+        app:layout_constraintTop_toBottomOf="@id/tvCadastroCarro" />
+
+    <EditText
+        android:id="@+id/etPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Placa do carro"
+        app:layout_constraintTop_toBottomOf="@id/etModelo" />
+
+    <!-- Título do RadioGroup -->
+    <TextView
+        android:id="@+id/tvTipoCombustivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tipo combustível"
+        android:textColor="#1E88E5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPlaca" />
+
+    <!-- RadioGroup contendo os RadioButtons DENTRO dele -->
+    <RadioGroup
+        android:id="@+id/rgTipoCombustivel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvTipoCombustivel">
+
+        <RadioButton
+            android:id="@+id/rbGasolina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gasolina" />
+
+        <RadioButton
+            android:id="@+id/rbEtanol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etanol" />
+
+        <RadioButton
+            android:id="@+id/rbFlex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flex" />
+
+        <RadioButton
+            android:id="@+id/rbDieselS500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diesel S500" />
+
+        <RadioButton
+            android:id="@+id/rbDieselS10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diesel S10" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSalvarCarro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Salvar Carro"
+        app:backgroundTint="#1E88E5"
+        app:layout_constraintTop_toBottomOf="@id/rgTipoCombustivel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
