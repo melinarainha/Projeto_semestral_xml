@@ -1,3 +1,5 @@
+package com.example.projeto_semestral_xml
+
 object UsuarioRepository {
     private val listaUsuarios = mutableListOf<Usuario>()
 

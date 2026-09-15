@@ -22,19 +22,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CadastroVeiculosActivity_"
+            android:name=".LoginUsuarioActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".CadastroRotaActivity_"
+            android:name=".ListaUsuariosActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Lista_usuarios_activity"
+            android:name=".EditarUsuarioActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Editar_usuario_activity"
+            android:name=".CadastroCarroActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".CadastroRotaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

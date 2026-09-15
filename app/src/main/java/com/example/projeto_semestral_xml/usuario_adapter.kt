@@ -1,4 +1,4 @@
-package com.example.projeto_semestral
+package com.example.projeto_semestral_xml
 
 import android.view.LayoutInflater
 import android.view.View

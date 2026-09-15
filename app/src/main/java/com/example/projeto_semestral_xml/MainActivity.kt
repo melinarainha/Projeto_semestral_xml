@@ -1,4 +1,4 @@
-package com.example.projeto_semestral
+package com.example.projeto_semestral_xml
 
 import android.content.Intent
 import android.graphics.Color
