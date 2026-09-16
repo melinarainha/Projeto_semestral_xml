@@ -37,5 +37,23 @@ class LoginUsuarioActivity : AppCompatActivity() {
             UsuarioRepository.adicionarUsuario(usuario)
             Toast.makeText(this, "Usuário cadastrado!\n$usuario", Toast.LENGTH_LONG).show()
         }
+
+        // Login de usuário
+        btnLogin.setOnClickListener {
+            val cpfDigitado = cpf.text.toString()
+            val senhaDigitada = senha.text.toString()
+
+            val usuario = UsuarioRepository.buscarPorCpf(cpfDigitado)
+
+            if (usuario != null && usuario.senha == senhaDigitada) {
+                Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
+
+                // Exemplo: abrir a tela de cadastro de rota
+                val intent = Intent(this, CadastroRotaActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "CPF ou senha inválidos!", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }

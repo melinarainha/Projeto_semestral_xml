@@ -1,28 +1,39 @@
 package com.example.projeto_semestral_xml
 
 object UsuarioRepository {
-    private val listaUsuarios = mutableListOf<Usuario>()
+    // Lista em memória para armazenar usuários
+    private val usuarios = mutableListOf<Usuario>()
 
+    // Adicionar novo usuário
     fun adicionarUsuario(usuario: Usuario) {
-        listaUsuarios.add(usuario)
+        usuarios.add(usuario)
     }
 
+    // Listar todos os usuários
     fun listarUsuarios(): List<Usuario> {
-        return listaUsuarios
+        return usuarios.toList() // retorna cópia imutável
     }
 
+    // Autenticar usuário pelo CPF e senha
     fun autenticar(cpf: String, senha: String): Usuario? {
-        return listaUsuarios.find { it.cpf == cpf && it.senha == senha }
+        return usuarios.find { it.cpf == cpf && it.senha == senha }
     }
 
+    // Remover usuário
     fun removerUsuario(usuario: Usuario) {
-        listaUsuarios.remove(usuario)
+        usuarios.removeIf { it.id == usuario.id }
     }
 
+    // Atualizar dados de um usuário existente
     fun atualizarUsuario(usuarioAtualizado: Usuario) {
-        val index = listaUsuarios.indexOfFirst { it.id == usuarioAtualizado.id }
+        val index = usuarios.indexOfFirst { it.id == usuarioAtualizado.id }
         if (index != -1) {
-            listaUsuarios[index] = usuarioAtualizado
+            usuarios[index] = usuarioAtualizado
         }
+    }
+
+    // Buscar usuário pelo CPF
+    fun buscarPorCpf(cpf: String): Usuario? {
+        return usuarios.find { it.cpf == cpf }
     }
 }
