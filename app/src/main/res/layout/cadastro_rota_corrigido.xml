@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroRotaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título fixo -->
+        <TextView
+            android:id="@+id/txtTituloRota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastro de Rota"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Local de saída -->
+        <EditText
+            android:id="@+id/edtLocalSaida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Local de Saida"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <!-- Local de chegada -->
+        <EditText
+            android:id="@+id/edtLocalChegada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Local de Chegada"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <!-- Hora da saída -->
+        <EditText
+            android:id="@+id/edtHoraSaida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hora da Saída"
+            android:inputType="time"
+            android:minHeight="48dp" />
+
+        <!-- Hora da chegada -->
+        <EditText
+            android:id="@+id/edtHoraChegada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hora de Chegada"
+            android:inputType="time"
+            android:minHeight="48dp" />
+
+        <!-- Botão de salvar -->
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:layout_marginTop="20dp"
+            android:minHeight="48dp" />
+
+    </LinearLayout>
+</ScrollView>
