@@ -34,14 +34,20 @@ class UsuarioAdapter(
         holder.permissoes.text = "Permissões: ${usuario.permissoes}"
 
         holder.btnRemover.setOnClickListener {
-            onRemoverClick(usuario)
-            usuarios.remove(usuario)
-            notifyItemRemoved(position)
-            notifyItemRangeChanged(position, usuarios.size)
+            val pos = holder.adapterPosition
+            if (pos != RecyclerView.NO_POSITION) {
+                val usuarioRemovido = usuarios[pos]
+                onRemoverClick(usuarioRemovido)
+                usuarios.removeAt(pos)
+                notifyItemRemoved(pos)
+            }
         }
 
         holder.btnEditar.setOnClickListener {
-            onEditarClick(usuario)
+            val pos = holder.adapterPosition
+            if (pos != RecyclerView.NO_POSITION) {
+                onEditarClick(usuarios[pos])
+            }
         }
     }
 

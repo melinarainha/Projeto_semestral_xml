@@ -1,5 +1,12 @@
 package com.example.projeto_semestral_xml
 
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+
 object UsuarioRepository {
     // Lista em memória para armazenar usuários
     private val usuarios = mutableListOf<Usuario>()
@@ -35,3 +42,4 @@ object UsuarioRepository {
         return usuarios.find { it.nome == nome }
     }
 }
+

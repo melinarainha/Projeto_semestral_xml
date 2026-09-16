@@ -12,7 +12,7 @@ class EditarUsuarioActivity : AppCompatActivity() {
         setContentView(R.layout.activity_editar_usuario)
 
         // Recupera o ID do usuário enviado pela ListaUsuariosActivity
-        val usuarioId = intent.getStringExtra("usuarioId")
+        val usuarioId = intent.getIntExtra("usuarioId", -1)
         val usuario = UsuarioRepository.listarUsuarios().find { it.id == usuarioId }
 
         // Referências aos campos da tela
@@ -38,7 +38,7 @@ class EditarUsuarioActivity : AppCompatActivity() {
                     nome = etNome.text.toString(),
                     cpf = etCpf.text.toString(),
                     senha = etSenha.text.toString(),
-                    permissoes = etPermissoes.text.toString(),
+                    permissoes = etPermissoes.text.toString()
                 )
                 UsuarioRepository.atualizarUsuario(usuarioAtualizado)
                 Toast.makeText(this, "Usuário atualizado com sucesso!", Toast.LENGTH_SHORT).show()

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:contentPadding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Local de saída -->
+        <TextView
+            android:id="@+id/tvLocalSaida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saída"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <!-- Local de chegada -->
+        <TextView
+            android:id="@+id/tvLocalChegada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chegada"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Hora da saída -->
+        <TextView
+            android:id="@+id/tvHoraSaida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora saída"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Hora da chegada -->
+        <TextView
+            android:id="@+id/tvHoraChegada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora chegada"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Linha divisória -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="#E0E0E0"/>
+
+        <!-- Ações -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarRota"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:text="Editar"
+                android:textColor="#2196F3"
+                android:layout_marginEnd="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRemoverRota"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:text="Remover"
+                android:textColor="#F44336"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
