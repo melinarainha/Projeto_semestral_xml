@@ -9,9 +9,10 @@
         android:id="@+id/tvTituloLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login Usuário"
+        android:text="Login"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:textColor="#2196F3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -24,14 +25,6 @@
         app:layout_constraintTop_toBottomOf="@id/tvTituloLogin"
         android:layout_marginTop="16dp"/>
 
-    <EditText
-        android:id="@+id/etCpf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="CPF"
-        android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@id/etNome"
-        android:layout_marginTop="8dp"/>
 
     <EditText
         android:id="@+id/etSenha"
@@ -39,30 +32,15 @@
         android:layout_height="wrap_content"
         android:hint="Senha"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/etCpf"
+        app:layout_constraintTop_toBottomOf="@id/etNome"
         android:layout_marginTop="8dp"/>
-
-    <EditText
-        android:id="@+id/etPermissoes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Permissões"
-        app:layout_constraintTop_toBottomOf="@id/etSenha"
-        android:layout_marginTop="8dp"/>
-
-    <Button
-        android:id="@+id/btnCadastrarUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar Usuário"
-        app:layout_constraintTop_toBottomOf="@id/etPermissoes"
-        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/btnLoginUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
-        app:layout_constraintTop_toBottomOf="@id/btnCadastrarUsuario"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintTop_toBottomOf="@id/etSenha"
         android:layout_marginTop="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

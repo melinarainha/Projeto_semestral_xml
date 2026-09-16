@@ -8,8 +8,6 @@
 
     <!-- Título -->
 
-    <!-- Botão Cadastrar Carro -->
-
     <!-- Botão Login Usuário -->
 
     <TextView
@@ -18,42 +16,36 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Controle de Frota"
-        android:textColor="#333333"
+        android:textColor="#2196F3"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCarro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="284dp"
-        android:text="Cadastrar Carro"
-        android:textAllCaps="true"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:backgroundTint="#4CAF50"
-        app:cornerRadius="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTituloPrincipal" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login Usuário"
-        android:textAllCaps="true"
+        android:layout_marginTop="236dp"
+        android:text="Login"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:cornerRadius="30dp"
         app:backgroundTint="#2196F3"
-        android:layout_marginTop="0dp"
-        app:layout_constraintTop_toBottomOf="@id/btnCarro"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/tvTituloPrincipal" />
+    <Button
+        android:id="@+id/btnCadastraUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar-se"
+        android:padding="12dp"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        android:layout_marginBottom="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@ class CadastroRotaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Vincula ao layout corrigido
-        setContentView(R.layout.cadastro_rota_corrigido)
+        setContentView(R.layout.cadastro_rota)
 
         // Referências aos campos do XML
         val edtLocalSaida = findViewById<EditText>(R.id.edtLocalSaida)

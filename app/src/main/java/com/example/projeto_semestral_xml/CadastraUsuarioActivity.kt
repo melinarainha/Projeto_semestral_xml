@@ -8,10 +8,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.UUID
 
-class LoginUsuarioActivity : AppCompatActivity() {
+class CadastraUsuarioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_usuario)
+        setContentView(R.layout.activity_cadastro_usuario)
 
         // Referências aos campos
         val nome = findViewById<EditText>(R.id.etNome)
@@ -21,7 +21,6 @@ class LoginUsuarioActivity : AppCompatActivity() {
 
         // Referências aos botões
         val btnCadastrar = findViewById<Button>(R.id.btnCadastrarUsuario)
-        val btnLogin = findViewById<Button>(R.id.btnLoginUsuario)
 
         // Cadastro de usuário
         btnCadastrar.setOnClickListener {
@@ -36,24 +35,7 @@ class LoginUsuarioActivity : AppCompatActivity() {
 
             UsuarioRepository.adicionarUsuario(usuario)
             Toast.makeText(this, "Usuário cadastrado!\n$usuario", Toast.LENGTH_LONG).show()
-        }
-
-        // Login de usuário
-        btnLogin.setOnClickListener {
-            val cpfDigitado = cpf.text.toString()
-            val senhaDigitada = senha.text.toString()
-
-            val usuario = UsuarioRepository.buscarPorCpf(cpfDigitado)
-
-            if (usuario != null && usuario.senha == senhaDigitada) {
-                Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
-
-                // Exemplo: abrir a tela de cadastro de rota
-                val intent = Intent(this, CadastroRotaActivity::class.java)
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, "CPF ou senha inválidos!", Toast.LENGTH_SHORT).show()
-            }
+            startActivity(Intent(this, HomeActivity::class.java))
         }
     }
 }

@@ -20,9 +20,7 @@ object UsuarioRepository {
     }
 
     // Remover usuário
-    fun removerUsuario(usuario: Usuario) {
-        usuarios.removeIf { it.id == usuario.id }
-    }
+    fun removerUsuario(usuario: Usuario) {usuarios.removeIf { it.id == usuario.id } }
 
     // Atualizar dados de um usuário existente
     fun atualizarUsuario(usuarioAtualizado: Usuario) {
@@ -33,7 +31,7 @@ object UsuarioRepository {
     }
 
     // Buscar usuário pelo CPF
-    fun buscarPorCpf(cpf: String): Usuario? {
-        return usuarios.find { it.cpf == cpf }
+    fun buscarPorNome(nome: String): Usuario? {
+        return usuarios.find { it.nome == nome }
     }
 }

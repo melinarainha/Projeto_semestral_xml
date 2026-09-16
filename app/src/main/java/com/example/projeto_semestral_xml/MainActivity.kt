@@ -11,16 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnCarro = findViewById<Button>(R.id.btnCarro)
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val btnCadastraUsuario = findViewById<Button>(R.id.btnCadastraUsuario)
+        val btnLoginUsuario = findViewById<Button>(R.id.btnLogin)
 
-        // Seleciona Cadastrar Carro
-        btnCarro.setOnClickListener {
-            startActivity(Intent(this, CadastroCarroActivity::class.java))
+        // Cadastra Usuario
+        btnCadastraUsuario.setOnClickListener {
+            startActivity(Intent(this, CadastraUsuarioActivity::class.java))
         }
-
         // Seleciona Login Usuário
-        btnLogin.setOnClickListener {
+        btnLoginUsuario.setOnClickListener {
             startActivity(Intent(this, LoginUsuarioActivity::class.java))
         }
     }
