@@ -55,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Salvar Alterações"
+        app:backgroundTint="#1E88E5"
         app:layout_constraintTop_toBottomOf="@id/etPermissoesEditar"
         android:layout_marginTop="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

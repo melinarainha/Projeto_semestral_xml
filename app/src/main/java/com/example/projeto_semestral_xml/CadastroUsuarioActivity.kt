@@ -32,7 +32,7 @@ class CadastroUsuarioActivity : AppCompatActivity() {
             Toast.makeText(this, "Usuário cadastrado!\n$usuario", Toast.LENGTH_LONG).show()
 
             // Volta para a tela principal
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }
     }

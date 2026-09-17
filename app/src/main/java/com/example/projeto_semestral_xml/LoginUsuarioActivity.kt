@@ -25,7 +25,7 @@ class LoginUsuarioActivity : AppCompatActivity() {
 
             if (usuario != null) {
                 Toast.makeText(this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, RelatorioActivity::class.java))
+                startActivity(Intent(this, HomeActivity::class.java))
                 finish()
             } else {
                 Toast.makeText(this, "Nome ou senha inválidos!", Toast.LENGTH_SHORT).show()

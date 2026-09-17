@@ -1,5 +1,6 @@
 package com.example.projeto_semestral_xml
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -42,6 +43,7 @@ class EditarUsuarioActivity : AppCompatActivity() {
                 )
                 UsuarioRepository.atualizarUsuario(usuarioAtualizado)
                 Toast.makeText(this, "Usuário atualizado com sucesso!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, HomeActivity::class.java))
                 finish()
             }
         }
